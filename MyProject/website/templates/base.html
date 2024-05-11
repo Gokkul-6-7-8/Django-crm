@@ -9,6 +9,11 @@
   <body>
     {% include "navbar.html" %}
     <div class="container">
+        {%if messages%}
+        {%for message in messages%}
+        {{message}}
+        {%endfor%}
+        {%endif%}
     {%block content%}
     {% endblock %}
     </div>
